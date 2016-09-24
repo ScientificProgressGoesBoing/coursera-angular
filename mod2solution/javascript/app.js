@@ -33,6 +33,12 @@ function ShoppingListCheckOffService() {
   service.item1.name = 'Tomatoes';
   service.item2 = new Object();
   service.item2.name = 'Running Shoes';
+  service.item3 = new Object();
+  service.item3.name = 'Water';
+  service.item4 = new Object();
+  service.item4.name = 'Oranges';
+  service.item5 = new Object();
+  service.item5.name = 'Book';
 
   // List of shopping items
   service.itemsToBuy = [ service.item1, service.item2  ];
