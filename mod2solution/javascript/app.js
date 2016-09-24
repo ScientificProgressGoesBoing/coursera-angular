@@ -37,6 +37,7 @@ function ShoppingListCheckOffService() {
   service.item2.quantity = 1;
   service.item3 = new Object();
   service.item3.name = 'Water';
+  service.item3.quantity = 10;
   service.item4 = new Object();
   service.item4.name = 'Oranges';
   service.item4.quantity = 5;
