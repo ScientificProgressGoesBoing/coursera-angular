@@ -45,7 +45,7 @@ function ShoppingListCheckOffService() {
   service.item5.quantity = 1;
 
   // List of shopping items
-  service.itemsToBuy = [ service.item1, service.item2  ];
+  service.itemsToBuy = [ service.item1, service.item2, service.item3, service.item4, service.item5  ];
   service.itemsBought = [];
 
 
