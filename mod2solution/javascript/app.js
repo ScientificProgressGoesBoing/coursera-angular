@@ -31,14 +31,18 @@ function ShoppingListCheckOffService() {
   // Hardcoded start settings
   service.item1 = new Object();
   service.item1.name = 'Tomatoes';
+  service.item1.quantity = 10;
   service.item2 = new Object();
   service.item2.name = 'Running Shoes';
+  service.item2.quantity = 1;
   service.item3 = new Object();
   service.item3.name = 'Water';
   service.item4 = new Object();
   service.item4.name = 'Oranges';
+  service.item4.quantity = 5;
   service.item5 = new Object();
   service.item5.name = 'Book';
+  service.item5.quantity = 1;
 
   // List of shopping items
   service.itemsToBuy = [ service.item1, service.item2  ];
