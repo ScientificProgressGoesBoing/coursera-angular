@@ -15,18 +15,11 @@ function FoundItems() {
     scope: {
       found: '<',
       onRemove: '&'
-    }//,
-    // controller: FoundItemsDirectiveController,
-    // controllerAs: 'narrow',
-    // bindToController: true
+    }
   };
 
   return ddo;
 } 
-
-// function FoundItemsDirectiveController() {
-  // var narrow = this;
-// }
 
  
  
