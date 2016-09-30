@@ -11,25 +11,37 @@ angular.module('NarrowItDownApp', [])
 function FoundItems() {
   var ddo = {
     restrict: 'E',
-    templateUrl: 'foundItems.html'
+    templateUrl: 'foundItems.html',
+    scope: {
+      found: '<',
+      onRemove: '&'
+    }//,
+    // controller: FoundItemsDirectiveController,
+    // controllerAs: 'narrow',
+    // bindToController: true
   };
 
   return ddo;
 } 
+
+// function FoundItemsDirectiveController() {
+  // var narrow = this;
+// }
+
  
  
 NarrowItDownController.$inject = ['MenuSearchService'];
 function NarrowItDownController(MenuSearchService) {
   var narrow = this;
   narrow.searchTerm = '';
-  narrow.items = [];
+  narrow.found = [];
 
   
   narrow.filterMenu = function (searchTerm){  
     return MenuSearchService.getMatchedMenuItems(searchTerm)
     .then(              
             function (response){
-                narrow.items = response;
+                narrow.found = response;
             }
           );
   }
@@ -38,7 +50,7 @@ function NarrowItDownController(MenuSearchService) {
 
 
   narrow.removeItem = function (itemIndex) {
-    narrow.items.splice(itemIndex, 1);
+    narrow.found.splice(itemIndex, 1);
   };
  
 }//end controller
@@ -55,13 +67,13 @@ function MenuSearchService($http, ApiBasePath) {
       }).then(
           function (response){
             var item;
-            var foundItems = [];
+            var found = [];
             while (item = response.data.menu_items.shift()){
               if (item.name.toLowerCase().indexOf(searchTerm) != -1){
-                foundItems.push(item);
+                found.push(item);
               }     
             }   
-            return foundItems; 
+            return found; 
           }
       )
         .catch(
