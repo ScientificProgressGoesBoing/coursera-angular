@@ -28,23 +28,26 @@ function NarrowItDownController(MenuSearchService) {
   var narrow = this;
   narrow.searchTerm = '';
   narrow.found = [];
+  narrow.n = 0;
 
   
   narrow.filterMenu = function (searchTerm){  
     return MenuSearchService.getMatchedMenuItems(searchTerm)
     .then(              
             function (response){
+                narrow.n++;
                 narrow.found = response;
             }
           );
   }
    
-  narrow.filterMenu(narrow.searchTerm);
+  narrow.filterMenu(narrow.searchTerm);  //display items on startup
 
 
   narrow.removeItem = function (itemIndex) {
     narrow.found.splice(itemIndex, 1);
   };
+  
  
 }//end controller
 

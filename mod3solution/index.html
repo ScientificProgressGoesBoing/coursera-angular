@@ -21,9 +21,9 @@
     <br/>
     <br/>
     <br/>      
-    <span ng-if="(narrow.found.length == 0)||(narrow.searchTerm.trim() == '')">Nothing found</span>
+    <span ng-if="(narrow.n > 1) && (narrow.found.length == 0 || narrow.searchTerm.trim() == '')">Nothing found</span>
     <ul>
-      <found-items ng-if="narrow.searchTerm.trim() != ''" found="narrow.found" on-remove="narrow.removeItem(index)" />
+      <found-items ng-if="narrow.n > 1 && narrow.searchTerm.trim() != ''" found="narrow.found" on-remove="narrow.removeItem(index)" />
     </ul>
   </div>
 
