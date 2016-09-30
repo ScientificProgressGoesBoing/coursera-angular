@@ -38,7 +38,7 @@ function NarrowItDownController(MenuSearchService) {
 
 
   narrow.removeItem = function (itemIndex) {
-    shoppingList.removeItem(itemIndex);
+    narrow.items.splice(itemIndex, 1);
   };
  
 }//end controller
