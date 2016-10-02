@@ -1,0 +1,25 @@
+itemDetail.name = item.name;
+itemDetail.description = item.description;
+
+
+
+
+
+
+
+//   ItemsController.$inject = ['MenuDataService']
+// function ItemsController(MenuDataService) {
+
+
+// it.getItems = function () {
+//   return MenuDataService.getItemsByCategory('L')
+//   .then(
+//     function (items){
+//       it.items = items;
+//     }
+//   );
+// }
+//
+// it.$onInit = function () {
+//   it.getItems();
+// };
