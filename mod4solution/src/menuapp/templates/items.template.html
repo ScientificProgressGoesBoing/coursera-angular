@@ -1,8 +1,12 @@
 <!-- <a ui-sref="home">Home</a> &lt;
 <a ui-sref="mainList">List</a> &lt; -->
 <h3>Items</h3>
-<p>Current category: {{it.currentCategory}}</p>
+<p>Chosen category: {{it.currentCategory}}</p>
 
-<ul>
+<!-- without component -->
+<!-- <ul>
   <li ng-repeat="item in it.items"><strong>{{item.name}}</strong> <br/>{{item.description}} </li>
-</ul>
+</ul> -->
+
+<!-- with component -->
+<items items="it.items"></items>
